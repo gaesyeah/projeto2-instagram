@@ -1,4 +1,5 @@
 *{
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 strong {
@@ -8,7 +9,6 @@ strong {
   margin-right: 3px;
 }
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: #E5E5E5;
 }
 .page {
@@ -79,11 +79,15 @@ e as suas disposições são diferentes*/
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #979797;
+  text-align: center;
+  color: #000000;
   font-size: 12px;
   margin-right: 220px;
   margin-left: 220px;
   border: 1px solid #DBDBDB;
+}
+.top_bar_center::placeholder {
+  text-align: center;
 }
 .top_bar_lateral {
   width: 143px;
@@ -111,7 +115,7 @@ e as suas disposições são diferentes*/
 }
 .storie_img_size {
   position: absolute;
-  border-radius: 100% /*retirar a parte quadrada do circulo*/
+  border-radius: 100%; /*retirar a parte quadrada do circulo*/
   height: 56px;
   margin-top: 5px;
   /*fiz isso para ficar uma imagem sobre a outra,
@@ -132,12 +136,12 @@ e as suas disposições são diferentes*/
   align-items: center;
   /* usei "margin-left" ao invés de "justify-content: 
   space-evenly" na div .stories para o "overflow:hidden
-   da mesma funcionar corretamente"*/
+  da mesma funcionar corretamente"*/
   margin-left: 17px;
 }
 .stories {
   position: relative; /*por causa das divs .arrow e .storie_img_size*/
-  overflow: scroll; /*"esconde" stories a mais dentro da div*/
+  overflow: hidden; /*"esconde" stories a mais dentro da div*/
   width: 614px;
   height: 118px;
   background: #FFFFFF;
@@ -145,9 +149,6 @@ e as suas disposições são diferentes*/
   align-items: center;
   margin-bottom: -26px; /*para reduzir a margin: top da div .post*/
   border: 1px solid #DBDBDB;
-}
-.stories::-webkit-scrollbar {
-  display: none;
 }
 /*---------------------------------------------------------*/
 .posts_container {
